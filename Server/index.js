@@ -5,6 +5,7 @@ import { connectdb } from './src/lib/db.js';
 import cors from 'cors';
 import MasterRouter from './src/Routes/master.route.js';
 import ReportRouter from './src/Routes/report.route.js';
+import EnteriesRouter from './src/Routes/enteries.route.js';
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ app.use(express.json());
 app.use(Router);
 app.use(MasterRouter);
 app.use(ReportRouter);
+app.use(EnteriesRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
